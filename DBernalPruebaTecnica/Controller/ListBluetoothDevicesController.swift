@@ -23,6 +23,10 @@ class ListBluetoothDevicesController: UIViewController {
     
     func SetConfig(){
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        tableViewDevices.register(DeviceCell.nib, forCellReuseIdentifier: DeviceCell.identifier)
+        tableViewDevices.delegate = self
+        tableViewDevices.dataSource = self
+        tableViewDevices.rowHeight = UITableView.automaticDimension
     }
 }
 extension ListBluetoothDevicesController : UITableViewDataSource{
@@ -31,8 +35,14 @@ extension ListBluetoothDevicesController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DeviceCell.identifier, for: indexPath) as? DeviceCell else{
+            return UITableViewCell()
+        }
+        let peripheral = peripherals[indexPath.row]
+        cell.labelDeviceName.text = peripheral.name ?? "Unknown"
+        cell.labelIdentifier.text = peripheral.identifier.uuidString
         
-        return UITableViewCell()
+        return cell
     }
     
     
@@ -51,7 +61,7 @@ extension ListBluetoothDevicesController : CBCentralManagerDelegate{
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if !peripherals.contains(peripheral) {
             peripherals.append(peripheral)
-            tableView.reloadData()
+            tableViewDevices.reloadData()
         }
     }
     

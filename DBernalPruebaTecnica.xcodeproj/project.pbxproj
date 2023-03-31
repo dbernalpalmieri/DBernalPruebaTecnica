@@ -19,6 +19,8 @@
 		F725D49E29D664B200A52ACE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49D29D664B200A52ACE /* Utility.swift */; };
 		F725D4A129D6657B00A52ACE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A029D6657B00A52ACE /* Login.swift */; };
 		F725D4A329D665E800A52ACE /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A229D665E800A52ACE /* Usuario.swift */; };
+		F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A629D6A7F700A52ACE /* DeviceCell.swift */; };
+		F725D4A929D6A7F700A52ACE /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725D4A729D6A7F700A52ACE /* DeviceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F725D49D29D664B200A52ACE /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F725D4A029D6657B00A52ACE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F725D4A229D665E800A52ACE /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		F725D4A629D6A7F700A52ACE /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = DBernalPruebaTecnica/Controller/Cell/DeviceCell.swift; sourceTree = SOURCE_ROOT; };
+		F725D4A729D6A7F700A52ACE /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		F725D49229D64F0200A52ACE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F725D4A529D6A78E00A52ACE /* Cell */,
 				F725D48729D64EEB00A52ACE /* LaunchScreen.storyboard */,
 				F725D48229D64EEA00A52ACE /* Main.storyboard */,
 			);
@@ -117,6 +122,7 @@
 		F725D49429D64F2000A52ACE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F725D4A429D6A78100A52ACE /* Cell */,
 				F725D48029D64EEA00A52ACE /* LoginController.swift */,
 				F725D49529D65F2C00A52ACE /* MenuController.swift */,
 				F725D49729D65F5300A52ACE /* ListBluetoothDevicesController.swift */,
@@ -139,6 +145,22 @@
 				F725D4A229D665E800A52ACE /* Usuario.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F725D4A429D6A78100A52ACE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F725D4A629D6A7F700A52ACE /* DeviceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F725D4A529D6A78E00A52ACE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F725D4A729D6A7F700A52ACE /* DeviceCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +224,7 @@
 				F725D48929D64EEB00A52ACE /* LaunchScreen.storyboard in Resources */,
 				F725D48629D64EEB00A52ACE /* Assets.xcassets in Resources */,
 				F725D48429D64EEA00A52ACE /* Main.storyboard in Resources */,
+				F725D4A929D6A7F700A52ACE /* DeviceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +238,7 @@
 				F725D49E29D664B200A52ACE /* Utility.swift in Sources */,
 				F725D49629D65F2C00A52ACE /* MenuController.swift in Sources */,
 				F725D48129D64EEA00A52ACE /* LoginController.swift in Sources */,
+				F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */,
 				F725D47D29D64EEA00A52ACE /* AppDelegate.swift in Sources */,
 				F725D49B29D6646F00A52ACE /* LoginViewModel.swift in Sources */,
 				F725D4A329D665E800A52ACE /* Usuario.swift in Sources */,
