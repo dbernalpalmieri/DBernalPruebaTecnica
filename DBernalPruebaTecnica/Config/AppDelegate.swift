@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var inactivityTimer: Timer?
-    let inactivityDuration: TimeInterval = 5 // Duración de inactividad deseada en segundos (3 minutos)
+    let inactivityDuration: TimeInterval = 180 // Duración de inactividad deseada en segundos (3 minutos)
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -37,9 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Iniciar temporizador de inactividad
         inactivityTimer = Timer.scheduledTimer(withTimeInterval: inactivityDuration, repeats: false) { [weak self] _ in
             // Redireccionar al LoginViewController después de la duración de inactividad
-            print("Ya paso el tiempo ")
+            guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
+                return
+            }
+            
+            guard let navigationController = rootViewController as? UINavigationController else {
+                return
+            }
+
+            navigationController.popToRootViewController(animated: true)
+
             self?.resetInactivityTimer()
-           
         }
     }
     
