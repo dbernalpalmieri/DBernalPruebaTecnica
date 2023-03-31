@@ -32,7 +32,14 @@ class LoginController: UIViewController {
         textFieldPassword.placeholder = "*********"
         textFieldPassword.isSecureTextEntry = true
         
+        textFieldEmail.text = "daniel@gmail.com"
+        textFieldPassword.text = "Hola123*"
+        
         buttonLogin.setTitle("Login", for: .normal)
+        
+//        let x = util.encriptarAES256(cadena: "Recibido Satisfactoriamen", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55")
+//        print(x)
+//        print(util.desencriptarAES256(cadenaEncriptada: x!, claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55"))
     }
     
     

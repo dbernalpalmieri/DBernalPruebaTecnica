@@ -20,9 +20,13 @@ class MenuController: UIViewController {
 
         SetConfig()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     
     func SetConfig(){
-        navigationController?.isNavigationBarHidden = true
+        
         labelTitle.text = "Menu"
         labelTitle.textAlignment = NSTextAlignment.center
         textFieldAge.placeholder = "Age"
@@ -49,7 +53,7 @@ class MenuController: UIViewController {
         }
         
         
-        let usuario = Usuario(email: "", password: "", name: name, age: age)
+//        let usuario = Usuario(email: "", password: "", name: name, age: age)
 
         
     }

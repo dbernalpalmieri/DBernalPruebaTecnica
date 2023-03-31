@@ -22,6 +22,7 @@ class ListBluetoothDevicesController: UIViewController {
     }
     
     func SetConfig(){
+        navigationController?.isNavigationBarHidden = false
         centralManager = CBCentralManager(delegate: self, queue: nil)
         tableViewDevices.register(DeviceCell.nib, forCellReuseIdentifier: DeviceCell.identifier)
         tableViewDevices.delegate = self

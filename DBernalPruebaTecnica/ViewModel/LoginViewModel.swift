@@ -9,7 +9,6 @@ struct LoginViewModel{
         util.urlComponents.path = "/Login"
         
         if let url = util.urlComponents.url {
-            
             do{
                 util.jsonEncoder.outputFormatting = .prettyPrinted
                 
@@ -17,7 +16,7 @@ struct LoginViewModel{
                 var request = URLRequest(url: url)
                 request.httpMethod = "POST"
                 request.httpBody = jsonBodyData
-                request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 
                 util.urlSession.dataTask(with: request) { data, res, error in
                     
