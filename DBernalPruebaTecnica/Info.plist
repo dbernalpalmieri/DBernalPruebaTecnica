@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSBluetoothServices</key>
-	<array>
-		<string></string>
-	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Allow Bluetooth</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Allow Bluetooth 1</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Allow Bluetooth 2</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
