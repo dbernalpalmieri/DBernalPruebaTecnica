@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0477F529D6E7300003B6A7 /* UsuarioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0477F429D6E7300003B6A7 /* UsuarioData.swift */; };
+		AA0477F729D6E7C70003B6A7 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0477F629D6E7C70003B6A7 /* DataResponse.swift */; };
 		F725D47D29D64EEA00A52ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D47C29D64EEA00A52ACE /* AppDelegate.swift */; };
 		F725D47F29D64EEA00A52ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D47E29D64EEA00A52ACE /* SceneDelegate.swift */; };
 		F725D48129D64EEA00A52ACE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D48029D64EEA00A52ACE /* LoginController.swift */; };
@@ -15,15 +17,17 @@
 		F725D48929D64EEB00A52ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F725D48729D64EEB00A52ACE /* LaunchScreen.storyboard */; };
 		F725D49629D65F2C00A52ACE /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49529D65F2C00A52ACE /* MenuController.swift */; };
 		F725D49829D65F5300A52ACE /* ListBluetoothDevicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49729D65F5300A52ACE /* ListBluetoothDevicesController.swift */; };
-		F725D49B29D6646F00A52ACE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49A29D6646F00A52ACE /* LoginViewModel.swift */; };
+		F725D49B29D6646F00A52ACE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49A29D6646F00A52ACE /* ViewModel.swift */; };
 		F725D49E29D664B200A52ACE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D49D29D664B200A52ACE /* Utility.swift */; };
-		F725D4A129D6657B00A52ACE /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A029D6657B00A52ACE /* Login.swift */; };
+		F725D4A129D6657B00A52ACE /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A029D6657B00A52ACE /* Authentication.swift */; };
 		F725D4A329D665E800A52ACE /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A229D665E800A52ACE /* Usuario.swift */; };
 		F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A629D6A7F700A52ACE /* DeviceCell.swift */; };
 		F725D4A929D6A7F700A52ACE /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725D4A729D6A7F700A52ACE /* DeviceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0477F429D6E7300003B6A7 /* UsuarioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioData.swift; sourceTree = "<group>"; };
+		AA0477F629D6E7C70003B6A7 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		F725D47929D64EEA00A52ACE /* DBernalPruebaTecnica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBernalPruebaTecnica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F725D47C29D64EEA00A52ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F725D47E29D64EEA00A52ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,9 +38,9 @@
 		F725D48A29D64EEB00A52ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F725D49529D65F2C00A52ACE /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		F725D49729D65F5300A52ACE /* ListBluetoothDevicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBluetoothDevicesController.swift; sourceTree = "<group>"; };
-		F725D49A29D6646F00A52ACE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F725D49A29D6646F00A52ACE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F725D49D29D664B200A52ACE /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		F725D4A029D6657B00A52ACE /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		F725D4A029D6657B00A52ACE /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		F725D4A229D665E800A52ACE /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		F725D4A629D6A7F700A52ACE /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = DBernalPruebaTecnica/Controller/Cell/DeviceCell.swift; sourceTree = SOURCE_ROOT; };
 		F725D4A729D6A7F700A52ACE /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
@@ -87,7 +91,7 @@
 		F725D49029D64EF300A52ACE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F725D49A29D6646F00A52ACE /* LoginViewModel.swift */,
+				F725D49A29D6646F00A52ACE /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -141,8 +145,10 @@
 		F725D49F29D6656B00A52ACE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F725D4A029D6657B00A52ACE /* Login.swift */,
+				F725D4A029D6657B00A52ACE /* Authentication.swift */,
 				F725D4A229D665E800A52ACE /* Usuario.swift */,
+				AA0477F429D6E7300003B6A7 /* UsuarioData.swift */,
+				AA0477F629D6E7C70003B6A7 /* DataResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,11 +246,13 @@
 				F725D48129D64EEA00A52ACE /* LoginController.swift in Sources */,
 				F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */,
 				F725D47D29D64EEA00A52ACE /* AppDelegate.swift in Sources */,
-				F725D49B29D6646F00A52ACE /* LoginViewModel.swift in Sources */,
+				F725D49B29D6646F00A52ACE /* ViewModel.swift in Sources */,
+				AA0477F529D6E7300003B6A7 /* UsuarioData.swift in Sources */,
 				F725D4A329D665E800A52ACE /* Usuario.swift in Sources */,
 				F725D47F29D64EEA00A52ACE /* SceneDelegate.swift in Sources */,
 				F725D49829D65F5300A52ACE /* ListBluetoothDevicesController.swift in Sources */,
-				F725D4A129D6657B00A52ACE /* Login.swift in Sources */,
+				AA0477F729D6E7C70003B6A7 /* DataResponse.swift in Sources */,
+				F725D4A129D6657B00A52ACE /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

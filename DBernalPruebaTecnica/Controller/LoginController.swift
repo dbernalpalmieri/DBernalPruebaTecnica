@@ -36,10 +36,10 @@ class LoginController: UIViewController {
         textFieldPassword.text = "Hola123*"
         
         buttonLogin.setTitle("Login", for: .normal)
-        
+        //KaLXQ/oByzkau5g9ATQfxgBBsDNy22f1WViDPff8oQFyIUHwy58qDkrrBBqEzY9Bsgo2LhA=
 //        let x = util.encriptarAES256(cadena: "Recibido Satisfactoriamen", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55")
 //        print(x)
-//        print(util.desencriptarAES256(cadenaEncriptada: x!, claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55"))
+//        print(util.desencriptarAES256(cadenaEncriptada: "KaLXQ/oByzkau5g9ATQfxgBBsDNy22f1WViDPff8oQFyIUHwy58qDkrrBBqEzY9Bsgo2LhA=", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55"))
     }
     
     
@@ -61,7 +61,7 @@ class LoginController: UIViewController {
     }
     
     func ValidateLogin(_ usuario : Usuario){
-        util.loginViewModel.PostAuthorization(usuario) { login, error in
+        util.viewModel.PostAuthorization(usuario) { login, error in
             if let login = login, error == nil{
                 if login.status{
                     DispatchQueue.main.async {
@@ -71,7 +71,7 @@ class LoginController: UIViewController {
                 }else{
                     DispatchQueue.global(qos: .background).async {
                         DispatchQueue.main.async {
-                            self.labelError.text = login.message
+                            self.labelError.text = "Invalid credentials."
                         }
                     }
                 }

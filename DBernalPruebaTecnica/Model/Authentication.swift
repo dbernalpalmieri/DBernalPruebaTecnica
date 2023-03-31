@@ -3,7 +3,7 @@
 import Foundation
 
 
-struct Login : Codable{
+struct Authentication : Codable{
     let status: Bool
     let message: String
 }

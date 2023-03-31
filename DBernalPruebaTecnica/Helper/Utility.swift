@@ -12,7 +12,7 @@ struct Utility{
     let jsonEncoder = JSONEncoder()
     let jsonDecoder = JSONDecoder()
     var urlComponents = URLComponents()
-    let loginViewModel = LoginViewModel()
+    let viewModel = ViewModel()
     private init(){
         
     }

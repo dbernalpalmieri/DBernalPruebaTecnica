@@ -34,6 +34,9 @@ class MenuController: UIViewController {
         
         buttonBluetoothDevices.setTitle("Bluetooth Devices", for: .normal)
         buttonSendData.setTitle("Send Data", for: .normal)
+        
+        textFieldAge.text = "22"
+        textFieldName.text = "Daniel"
     
     }
     
@@ -52,11 +55,48 @@ class MenuController: UIViewController {
             return
         }
         
+        let usuarioData = UsuarioData(name: name, age: age)
         
-//        let usuario = Usuario(email: "", password: "", name: name, age: age)
-
+        LoadData(usuarioData)
         
     }
-    
+
+    func LoadData(_ usuarioData : UsuarioData){
+        util.viewModel.PostValidateData(usuarioData) { dataResponse, error in
+            if let dataResponse = dataResponse, error == nil{
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        // Crear una instancia de UIAlertController con estilo "alert"
+                        let alert = UIAlertController(title: dataResponse.respuesta, message: util.desencriptarAES256(cadenaEncriptada: dataResponse.clave, claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55"), preferredStyle: .alert)
+
+                        // Crear una acción "OK" para el alert
+                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+                        // Agregar la acción "OK" al alert
+                        alert.addAction(okAction)
+
+                        // Mostrar el alert en la pantalla
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }else if let error = error{
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        // Crear una instancia de UIAlertController con estilo "alert"
+                        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+
+                        // Crear una acción "OK" para el alert
+                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+                        // Agregar la acción "OK" al alert
+                        alert.addAction(okAction)
+
+                        // Mostrar el alert en la pantalla
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
+    }
 
 }
