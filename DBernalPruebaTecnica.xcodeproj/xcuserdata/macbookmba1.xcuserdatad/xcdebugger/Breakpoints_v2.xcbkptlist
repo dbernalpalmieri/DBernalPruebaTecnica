@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "buttonLoginClic(_:)"
+            landmarkName = "SetConfig()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A252E8A-D257-4F0A-89EB-71DEC1222002"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DBernalPruebaTecnica/Controller/LoginController.swift"
@@ -32,40 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "ValidateLogin(_:)"
+            landmarkName = "buttonLoginClic(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6A252E8A-D257-4F0A-89EB-71DEC1222002 - a0ee687b1563366e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;DBernalPruebaTecnica.Login&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBernalPruebaTecnica.LoginController.ValidateLogin(DBernalPruebaTecnica.Usuario) -&gt; ()"
-                  moduleName = "DBernalPruebaTecnica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/Controller/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "380">
-               </Location>
-               <Location
-                  uuid = "6A252E8A-D257-4F0A-89EB-71DEC1222002 - a0ee687b1563366e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;DBernalPruebaTecnica.Login&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBernalPruebaTecnica.LoginController.ValidateLogin(DBernalPruebaTecnica.Usuario) -&gt; ()"
-                  moduleName = "DBernalPruebaTecnica"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/Controller/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "444">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,25 +46,200 @@
             filePath = "DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "ListBluetoothDevicesController"
-            landmarkType = "3">
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "SetConfig()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "87AD7F50-68CF-45F7-8A0C-07513CE9D33A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "766DF21A-CE90-4B33-8110-FA0B43AB291C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "PostValidateData(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CDF2DB68-A85B-4EB9-B405-A46438D9372E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "PostValidateData(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CDF2DB68-A85B-4EB9-B405-A46438D9372E - 30d159c177435203"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBernalPruebaTecnica.ViewModel.PostValidateData(DBernalPruebaTecnica.UsuarioData, (Swift.Optional&lt;DBernalPruebaTecnica.DataResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DBernalPruebaTecnica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "CDF2DB68-A85B-4EB9-B405-A46438D9372E - 30d159c177435203"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBernalPruebaTecnica.ViewModel.PostValidateData(DBernalPruebaTecnica.UsuarioData, (Swift.Optional&lt;DBernalPruebaTecnica.DataResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DBernalPruebaTecnica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "CDF2DB68-A85B-4EB9-B405-A46438D9372E - 30d159c177435203"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DBernalPruebaTecnica.ViewModel.PostValidateData(DBernalPruebaTecnica.UsuarioData, (Swift.Optional&lt;DBernalPruebaTecnica.DataResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DBernalPruebaTecnica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6EA8029-A668-46EF-B1F9-090862500428"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "centralManager(_:didDiscover:advertisementData:rssi:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E6EA8029-A668-46EF-B1F9-090862500428 - 9d26a370307402d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DBernalPruebaTecnica.ListBluetoothDevicesController.centralManager(_: __C.CBCentralManager, didDiscover: __C.CBPeripheral, advertisementData: Swift.Dictionary&lt;Swift.String, Any&gt;, rssi: __C.NSNumber) -&gt; ()"
+                  moduleName = "DBernalPruebaTecnica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "E6EA8029-A668-46EF-B1F9-090862500428 - 9d26a370307402d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DBernalPruebaTecnica.ListBluetoothDevicesController.centralManager(_: __C.CBCentralManager, didDiscover: __C.CBPeripheral, advertisementData: Swift.Dictionary&lt;Swift.String, Any&gt;, rssi: __C.NSNumber) -&gt; ()"
+                  moduleName = "DBernalPruebaTecnica"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba1/Documents/DBP/xcode/DBernalPruebaTecnica/DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D615A1E6-45A3-4AEF-A519-A64973754453"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/Controller/ListBluetoothDevicesController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "centralManager(_:didDiscover:advertisementData:rssi:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "505B37BD-1D5E-4FDE-BD8D-D398685A2911"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "PostValidateData(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AFEB8FE-6C92-425B-AFE8-F1B148005ADA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DBernalPruebaTecnica/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "PostValidateData(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

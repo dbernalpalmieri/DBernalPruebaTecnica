@@ -13,6 +13,7 @@ class ListBluetoothDevicesController: UIViewController {
     
     var centralManager: CBCentralManager!
     var peripherals = [CBPeripheral]()
+    var range = 900.0 // Rango en metros
     
     @IBOutlet weak var tableViewDevices : UITableView!
 
@@ -41,7 +42,9 @@ extension ListBluetoothDevicesController : UITableViewDataSource{
         }
         let peripheral = peripherals[indexPath.row]
         cell.labelDeviceName.text = peripheral.name ?? "Unknown"
-        cell.labelIdentifier.text = peripheral.identifier.uuidString
+        cell.labelIdentifier.text = "\(peripheral.identifier.uuidString) (\(peripheral.rssi ?? 0) dBm)"
+        cell.labelIdentifier.numberOfLines = 0
+        
         
         return cell
     }
@@ -56,15 +59,35 @@ extension ListBluetoothDevicesController : CBCentralManagerDelegate{
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
-            centralManager.scanForPeripherals(withServices: nil)
+            let scanOptions = [CBCentralManagerScanOptionAllowDuplicatesKey: false]
+            centralManager.scanForPeripherals(withServices: nil, options: scanOptions)
+        }else{
+            DispatchQueue.global(qos: .background).async {
+                DispatchQueue.main.async {
+                        // Crear una instancia de UIAlertController con estilo "alert"
+                    let alert = UIAlertController(title: "Bluetooth OFF", message: "Power on Bluetooth", preferredStyle: .alert)
+                    
+                        // Crear una acción "OK" para el alert
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                        // Agregar la acción "OK" al alert
+                    alert.addAction(okAction)
+                    
+                        // Mostrar el alert en la pantalla
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
         }
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        if !peripherals.contains(peripheral) {
-            peripherals.append(peripheral)
-            tableViewDevices.reloadData()
+        if RSSI.doubleValue < range, let name = peripheral.name {
+            if !peripherals.contains(peripheral) {
+                peripherals.append(peripheral)
+            }
         }
+        tableViewDevices.reloadData()
     }
+    
     
     
 }

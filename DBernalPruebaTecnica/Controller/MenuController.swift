@@ -35,7 +35,7 @@ class MenuController: UIViewController {
         buttonBluetoothDevices.setTitle("Bluetooth Devices", for: .normal)
         buttonSendData.setTitle("Send Data", for: .normal)
         
-        textFieldAge.text = "22"
+        textFieldAge.text = "20"
         textFieldName.text = "Daniel"
     
     }
@@ -47,7 +47,7 @@ class MenuController: UIViewController {
         }
     }
     @IBAction func buttonSendDataClic (_ sender : UIButton!){
-        guard let age = Int(textFieldAge.text ?? "0"), 1...100 ~= age  else{
+        guard let age = textFieldAge.text  else{
             return
         }
         
@@ -62,6 +62,7 @@ class MenuController: UIViewController {
     }
 
     func LoadData(_ usuarioData : UsuarioData){
+        
         util.viewModel.PostValidateData(usuarioData) { dataResponse, error in
             if let dataResponse = dataResponse, error == nil{
                 DispatchQueue.global(qos: .background).async {
