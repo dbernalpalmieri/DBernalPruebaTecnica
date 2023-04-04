@@ -23,6 +23,11 @@
 		F725D4A329D665E800A52ACE /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A229D665E800A52ACE /* Usuario.swift */; };
 		F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4A629D6A7F700A52ACE /* DeviceCell.swift */; };
 		F725D4A929D6A7F700A52ACE /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725D4A729D6A7F700A52ACE /* DeviceCell.xib */; };
+		F725D4AD29D7648F00A52ACE /* DataSave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F725D4AB29D7648F00A52ACE /* DataSave.xcdatamodeld */; };
+		F725D4AF29D764E000A52ACE /* DataSaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4AE29D764E000A52ACE /* DataSaveViewModel.swift */; };
+		F725D4B129D768BA00A52ACE /* ListClaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4B029D768BA00A52ACE /* ListClaveController.swift */; };
+		F725D4B429D7697200A52ACE /* ClaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725D4B229D7697100A52ACE /* ClaveCell.swift */; };
+		F725D4B529D7697200A52ACE /* ClaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725D4B329D7697200A52ACE /* ClaveCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		F725D4A229D665E800A52ACE /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		F725D4A629D6A7F700A52ACE /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = DBernalPruebaTecnica/Controller/Cell/DeviceCell.swift; sourceTree = SOURCE_ROOT; };
 		F725D4A729D6A7F700A52ACE /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
+		F725D4AC29D7648F00A52ACE /* DataSave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataSave.xcdatamodel; sourceTree = "<group>"; };
+		F725D4AE29D764E000A52ACE /* DataSaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSaveViewModel.swift; sourceTree = "<group>"; };
+		F725D4B029D768BA00A52ACE /* ListClaveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListClaveController.swift; sourceTree = "<group>"; };
+		F725D4B229D7697100A52ACE /* ClaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClaveCell.swift; path = DBernalPruebaTecnica/Controller/Cell/ClaveCell.swift; sourceTree = SOURCE_ROOT; };
+		F725D4B329D7697200A52ACE /* ClaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClaveCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,7 @@
 		F725D47B29D64EEA00A52ACE /* DBernalPruebaTecnica */ = {
 			isa = PBXGroup;
 			children = (
+				F725D4AA29D7647700A52ACE /* data */,
 				F725D49F29D6656B00A52ACE /* Model */,
 				F725D49C29D664A400A52ACE /* Helper */,
 				F725D49429D64F2000A52ACE /* Controller */,
@@ -92,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F725D49A29D6646F00A52ACE /* ViewModel.swift */,
+				F725D4AE29D764E000A52ACE /* DataSaveViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -130,6 +142,7 @@
 				F725D48029D64EEA00A52ACE /* LoginController.swift */,
 				F725D49529D65F2C00A52ACE /* MenuController.swift */,
 				F725D49729D65F5300A52ACE /* ListBluetoothDevicesController.swift */,
+				F725D4B029D768BA00A52ACE /* ListClaveController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 		F725D4A429D6A78100A52ACE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F725D4B229D7697100A52ACE /* ClaveCell.swift */,
 				F725D4A629D6A7F700A52ACE /* DeviceCell.swift */,
 			);
 			path = Cell;
@@ -165,8 +179,17 @@
 			isa = PBXGroup;
 			children = (
 				F725D4A729D6A7F700A52ACE /* DeviceCell.xib */,
+				F725D4B329D7697200A52ACE /* ClaveCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F725D4AA29D7647700A52ACE /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F725D4AB29D7648F00A52ACE /* DataSave.xcdatamodeld */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +252,7 @@
 			files = (
 				F725D48929D64EEB00A52ACE /* LaunchScreen.storyboard in Resources */,
 				F725D48629D64EEB00A52ACE /* Assets.xcassets in Resources */,
+				F725D4B529D7697200A52ACE /* ClaveCell.xib in Resources */,
 				F725D48429D64EEA00A52ACE /* Main.storyboard in Resources */,
 				F725D4A929D6A7F700A52ACE /* DeviceCell.xib in Resources */,
 			);
@@ -241,9 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F725D4AD29D7648F00A52ACE /* DataSave.xcdatamodeld in Sources */,
 				F725D49E29D664B200A52ACE /* Utility.swift in Sources */,
 				F725D49629D65F2C00A52ACE /* MenuController.swift in Sources */,
 				F725D48129D64EEA00A52ACE /* LoginController.swift in Sources */,
+				F725D4B129D768BA00A52ACE /* ListClaveController.swift in Sources */,
+				F725D4B429D7697200A52ACE /* ClaveCell.swift in Sources */,
 				F725D4A829D6A7F700A52ACE /* DeviceCell.swift in Sources */,
 				F725D47D29D64EEA00A52ACE /* AppDelegate.swift in Sources */,
 				F725D49B29D6646F00A52ACE /* ViewModel.swift in Sources */,
@@ -253,6 +280,7 @@
 				F725D49829D65F5300A52ACE /* ListBluetoothDevicesController.swift in Sources */,
 				AA0477F729D6E7C70003B6A7 /* DataResponse.swift in Sources */,
 				F725D4A129D6657B00A52ACE /* Authentication.swift in Sources */,
+				F725D4AF29D764E000A52ACE /* DataSaveViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +506,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F725D4AB29D7648F00A52ACE /* DataSave.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F725D4AC29D7648F00A52ACE /* DataSave.xcdatamodel */,
+			);
+			currentVersion = F725D4AC29D7648F00A52ACE /* DataSave.xcdatamodel */;
+			path = DataSave.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F725D47129D64EEA00A52ACE /* Project object */;
 }

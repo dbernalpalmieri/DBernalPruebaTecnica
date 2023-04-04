@@ -24,43 +24,50 @@ class LoginController: UIViewController {
     func SetConfig(){
         labelError.text = ""
         labelError.textColor = .red
+        labelError.textAlignment = .center
         
         labelTitle.text = "Login"
         labelTitle.textAlignment = NSTextAlignment.center
         
+        textFieldEmail.text = ""
         textFieldEmail.placeholder = "example@email.com"
+        textFieldEmail.keyboardType = .emailAddress
+        textFieldEmail.delegate = self
+        
+        textFieldPassword.keyboardType = .default
+        textFieldPassword.text = ""
         textFieldPassword.placeholder = "*********"
         textFieldPassword.isSecureTextEntry = true
+        textFieldPassword.delegate = self
         
-        textFieldEmail.text = "daniel@gmail.com"
-        textFieldPassword.text = "Hola123*"
         
         buttonLogin.setTitle("Login", for: .normal)
-        //KaLXQ/oByzkau5g9ATQfxgBBsDNy22f1WViDPff8oQFyIUHwy58qDkrrBBqEzY9Bsgo2LhA=
-//        let x = util.encriptarAES256(cadena: "Recibido Satisfactoriamen", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55")
+        
+//        let x = util.encriptarAES256(cadena: "Recibido Satisfactoriamente", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55")
 //        print(x)
-//        print(util.desencriptarAES256(cadenaEncriptada: "KaLXQ/oByzkau5g9ATQfxgBBsDNy22f1WViDPff8oQFyIUHwy58qDkrrBBqEzY9Bsgo2LhA=", claveSecreta: "FVOTFTs1vGc1UjadBAVNeUKmr2RgHR55"))
     }
     
     
     @IBAction func buttonLoginClic(_ sender : UIButton!){
         labelError.text = ""
+       
         
-        guard let email = textFieldEmail.text else{
+        guard let email = textFieldEmail.text, !email.isEmpty, email != "" else{
             labelError.text = "Type your email"
             return
         }
-        guard let password = textFieldPassword.text else{
+        guard let password = textFieldPassword.text, !password.isEmpty, password != "" else{
             labelError.text = "Type your password"
             return
         }
-        
+        buttonLogin.isEnabled = false
         let usuario =  Usuario(email: email, password: password)
         
         ValidateLogin(usuario)
     }
     
     func ValidateLogin(_ usuario : Usuario){
+      
         util.viewModel.PostAuthorization(usuario) { login, error in
             if let login = login, error == nil{
                 if login.status{
@@ -83,8 +90,22 @@ class LoginController: UIViewController {
                 }
             }
         }
+        self.buttonLogin.isEnabled = true
     }
 
 
+}
+extension LoginController : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+            case self.textFieldEmail:
+                self.textFieldPassword.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+        }
+            //self.view.endEditing(true)
+
+        return true
+    }
 }
 

@@ -55,22 +55,16 @@ struct ViewModel{
                 do{
                     util.jsonEncoder.outputFormatting = [ .prettyPrinted]
                     
-//                    let json: [String: String] = ["name": "Daniel",
-//                                               "age" : "20"]
-                    
-                   // let jsonBodyData = try JSONSerialization.data(withJSONObject: json)
                     let jsonBodyData = try util.jsonEncoder.encode(usuarioData)
                     var request = URLRequest(url: url)
                     request.httpMethod = "POST"
                     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
                     request.httpBody = jsonBodyData
                   
                     
                     util.urlSession.dataTask(with: request) { data, res, error in
                         
                         if let data = data, let httpResponse = res as? HTTPURLResponse, error == nil{
-                            print(httpResponse.statusCode)
                             if 200...400 ~=  httpResponse.statusCode {
                                 do{
                                     let resData = try util.jsonDecoder.decode(DataResponse.self, from: data)

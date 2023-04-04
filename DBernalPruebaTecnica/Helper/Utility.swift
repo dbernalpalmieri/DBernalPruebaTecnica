@@ -1,6 +1,7 @@
 
 import Foundation
 import CryptoKit
+import UIKit
 
 var util = Utility.sharedInstance
 
@@ -13,6 +14,8 @@ struct Utility{
     let jsonDecoder = JSONDecoder()
     var urlComponents = URLComponents()
     let viewModel = ViewModel()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let dataSaveViewModel = DataSaveViewModel()
     private init(){
         
     }

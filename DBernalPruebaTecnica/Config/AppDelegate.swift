@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var inactivityTimer: Timer?
     let inactivityDuration: TimeInterval = 180 // Duración de inactividad deseada en segundos (3 minutos)
     
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "DataSave")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("No se pudo cargar el almacén persistente: \(error), \(error.userInfo)")
+            }
+                // Aquí se imprime la ruta de la base de datos
+            print("Ruta de la base de datos: \(storeDescription.url?.absoluteString ?? "")")
+        })
+        return container
+    }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

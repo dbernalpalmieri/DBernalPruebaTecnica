@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5FR-kN-R5k">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -168,14 +169,28 @@
                             <constraint firstItem="fSZ-Za-dcl" firstAttribute="top" secondItem="1P8-km-NP0" secondAttribute="top" constant="20" id="xDz-c7-4mu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fk9-tt-vJD"/>
+                    <navigationItem key="navigationItem" id="fk9-tt-vJD">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="H1J-iH-uXQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mxz-5U-GpU">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonListClaves:" destination="4n3-ZT-mfZ" eventType="touchUpInside" id="VcR-p4-eNR"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBluetoothDevices" destination="f3u-d5-NCG" id="Ut7-kx-df5"/>
+                        <outlet property="buttonListClaves" destination="mxz-5U-GpU" id="c11-1c-OOj"/>
                         <outlet property="buttonSendData" destination="9GB-0V-RJx" id="Gpp-Y5-S8j"/>
                         <outlet property="labelTitle" destination="hnx-sD-G2Q" id="3mX-g1-prM"/>
                         <outlet property="textFieldAge" destination="T4v-zS-y50" id="gzx-xP-IaQ"/>
                         <outlet property="textFieldName" destination="BZB-pf-8qC" id="gfu-4u-s0d"/>
                         <segue destination="Sgm-sy-uia" kind="show" identifier="bluetoothDevices" id="tAJ-Rk-cVJ"/>
+                        <segue destination="O2V-te-cXb" kind="show" identifier="listClaves" id="4m3-en-i1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWr-hk-cwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,6 +227,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCo-Ws-OMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2007" y="15"/>
+        </scene>
+        <!--List Clave Controller-->
+        <scene sceneID="Rdt-Di-qd2">
+            <objects>
+                <viewController id="O2V-te-cXb" customClass="ListClaveController" customModule="DBernalPruebaTecnica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Sv-4Z-GYv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dx5-b9-qln">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0mj-Kh-M0A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dx5-b9-qln" firstAttribute="top" secondItem="0mj-Kh-M0A" secondAttribute="top" id="MX8-5m-Awi"/>
+                            <constraint firstItem="0mj-Kh-M0A" firstAttribute="bottom" secondItem="Dx5-b9-qln" secondAttribute="bottom" id="PrX-ZQ-Rl9"/>
+                            <constraint firstItem="Dx5-b9-qln" firstAttribute="leading" secondItem="0mj-Kh-M0A" secondAttribute="leading" id="ssd-47-BUQ"/>
+                            <constraint firstItem="0mj-Kh-M0A" firstAttribute="trailing" secondItem="Dx5-b9-qln" secondAttribute="trailing" id="wfB-Fg-YJl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f1R-Hv-Tpe"/>
+                    <connections>
+                        <outlet property="tableViewClave" destination="Dx5-b9-qln" id="AtO-Sh-0kf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlI-DI-bR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="705"/>
         </scene>
     </scenes>
     <resources>
